@@ -1,0 +1,26 @@
+{
+  "name": "quizmaster-mern-online-quiz",
+  "version": "1.0.0",
+  "description": "Full-stack QuizMaster Online Quiz Website built with MERN Stack",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "server": "npm --prefix backend run dev",
+    "client": "npm --prefix frontend run dev",
+    "build:client": "npm --prefix frontend run build",
+    "test:backend": "node backend/test-api.js"
+  },
+  "keywords": [
+    "quizmaster",
+    "mern",
+    "quiz",
+    "mongodb",
+    "express",
+    "react",
+    "node",
+    "jwt",
+    "timer"
+  ],
+  "author": "muskan",
+  "license": "MIT"
+}
