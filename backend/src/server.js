@@ -35,6 +35,23 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
 }
 
+// Root welcome endpoint
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Welcome to QuizMaster REST API Server!',
+    frontendApp: 'http://localhost:5173',
+    documentation: {
+      healthCheck: '/api/health',
+      quizzes: '/api/quizzes',
+      auth: '/api/auth',
+      attempts: '/api/attempts',
+      admin: '/api/admin',
+    },
+    status: 'Running',
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   const dbStatus = getDbStatus();
